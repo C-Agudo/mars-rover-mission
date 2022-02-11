@@ -1,0 +1,110 @@
+
+.m-10{
+    margin: 10px;
+}
+
+.button {
+    background-color: #4CAF50;
+    border: 2px solid #4CAF50;;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.button:hover {
+    background-color: white;
+    color: black;
+}
+
+.way{
+    width: 50px;
+    height: 50px;
+    border: 1px solid orange;
+}
+
+.map{
+    width: 1000px;
+    height: 1000px;
+    display: grid;
+    grid-template-columns: repeat(20, 1fr);
+    grid-template-rows: repeat(20, 1fr);
+    border: 2px solid orange;
+}
+
+.obstacle{
+    color: white;
+    background-color: black;
+}
+
+.commands{
+    color: white;
+    background-color: #2d3748;
+    margin-bottom: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: orangered;
+    text-transform: uppercase;
+    padding: 1px;
+    font-family: "Raleway", cursive;
+    font-weight: 100;
+    position: relative;
+    width: 100%;
+    background: linear-gradient(to right, black, orangered, black);
+    white-space: nowrap;
+}
+h1::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: -50px;
+    width: 600px;
+    margin-left: -300px;
+    margin-top: -220px;
+    height: 600px;
+    background: radial-gradient(ellipse closest-side, #444, black);
+    z-index: -1;
+}
+h1 a {
+    background: black;
+    display: block;
+    padding: 20px;
+    text-decoration: none;
+    letter-spacing: 30px;
+    color: orangered;
+    -webkit-animation: come-in 1.5s 1 ease-in-out forwards;
+            animation: come-in 1.5s 1 ease-in-out forwards;
+}
+
+@-webkit-keyframes come-in {
+    0% {
+        letter-spacing: 80px;
+        color: rgba(255, 255, 255, 0);
+    }
+    70% {
+        letter-spacing: 20px;
+    }
+    100% {
+        letter-spacing: 25px;
+        color: orangered;
+    }
+}
+
+@keyframes come-in {
+    0% {
+        letter-spacing: 80px;
+        color: rgba(255, 255, 255, 0);
+    }
+    70% {
+        letter-spacing: 20px;
+    }
+    100% {
+        letter-spacing: 25px;
+        color: orangered;
+    }
+}
+

@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Src\SpaceExploration\Planets\Infrastructure\Controllers\PlanetGetController;
+use Src\SpaceExploration\Vehicles\Infrastructure\Controllers\VehicleLandingPutController;
+use Src\SpaceExploration\Vehicles\Infrastructure\Controllers\VehicleMovePatchController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,5 +17,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('mission');
+});
+
+Route::prefix('api')->group(function(){
+    Route::get('/planets/{name}', [PlanetGetController::class, '__invoke']);
+    Route::put('/vehicle', [VehicleLandingPutController::class, '__invoke']);
+    Route::patch('/vehicle', [VehicleMovePatchController::class, '__invoke']);
 });

@@ -1,0 +1,114 @@
+{
+	"info": {
+		"_postman_id": "a0052cb7-3c10-4c71-92e4-0741571ac88d",
+		"name": "MarsRoverMission",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "PostVehicle",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-csrf-token",
+						"value": "yjuBKO4CBz4J1yeYYB5I2gkkJqY0yPOB9upGzQzu",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": \"9d35e3d5-7029-4a8d-a76e-a515982b0083\",\n    \"position\": [10,10],\n    \"orientation\":\"N\",\n    \"planet_name\": \"Mars\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/vehicle",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"vehicle"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Patch",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "x-csrf-token",
+						"value": "yjuBKO4CBz4J1yeYYB5I2gkkJqY0yPOB9upGzQzu",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": \"9d35e3d5-7029-4a8d-a76e-a515982b0083\",\n    \"instructions\": \"BFFFR\",\n    \"planet_name\": \"Mars\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/vehicle",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"vehicle"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetPlanet",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-csrf-token",
+						"value": "yjuBKO4CBz4J1yeYYB5I2gkkJqY0yPOB9upGzQzu",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": \"9d35e3d5-7029-4a8d-a76e-a515982b0083\",\n    \"instructions\": \"BFFFR\",\n    \"planet_name\": \"Mars\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/vehicle",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"vehicle"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
