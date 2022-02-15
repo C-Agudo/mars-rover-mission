@@ -12,6 +12,16 @@ Application is dockerized, so after clone can run:
 
     <code>docker-compose up -d</code>
 
+Install composer and npm dependencies
+    
+    <code>composer install</code>
+
+    <code>npm install</code>
+
+I don't know why but storage requires permissions:
+
+    <code>chmod -R guo+w storage<code>
+
 Can build database from artisan migrate
 
     <code>docker exec php php artisan migrate</code>
