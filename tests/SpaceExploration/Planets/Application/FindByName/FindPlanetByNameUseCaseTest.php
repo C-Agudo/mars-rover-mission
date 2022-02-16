@@ -10,9 +10,9 @@ use Src\SpaceExploration\Planets\Infrastructure\Persistence\InMemoryPlanetReposi
 use Tests\CreatesApplication;
 use Tests\TestCase;
 
-class FindPlanetByNameUseCaseTest extends TestCase
+class FindPlanetByNameUseCaseTest
 {
-    /** @test */
+    //** @test */
     /*
         public function it_should_find_planet_by_Name():void{
 
